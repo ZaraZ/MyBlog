@@ -45,8 +45,9 @@ address, cite, code, em, th {
 
 
 /*网易css初始化代码 End*/
-p{
-  line-height: 25px;
+
+p {
+    line-height: 25px;
 }
 
 a {
@@ -97,6 +98,15 @@ h3 {
     margin: 0 auto;
     padding: 0;
     background-size: 100% auto;
+}
+
+.board {
+    margin: 50px auto 40px auto;
+    border: 1px black solid;
+    height: 1000px;
+    width: 820px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .blog-title {
