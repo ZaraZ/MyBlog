@@ -1,33 +1,50 @@
-.board{
-  height: 850px;
+.board {
+    height: auto;
 }
-h4{
-  font-size: 24px;
-  font-weight: bold;
-  margin: 80px auto 70px 0px;
+
+h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 80px auto 70px 0px;
 }
-h5{
-  font-size: 18px;
-  font-weight: bold;
-  float: left;
+
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
 }
-.lists{
-  margin: 30px auto 30px auto;
+
+.lists {
+    margin: 30px auto 30px auto;
 }
+
 .lists a:hover {
     color: black;
 }
-hr{
-  margin: 0;
+
+hr {
+    margin: 0;
 }
 
-.posted_time{
-  float: right;
+.posted_time {
+    float: right;
 }
+
 .page {
     font-size: 16px;
     width: 200px;
     height: 30px;
     margin: 50px auto;
+    text-align: center;
+}
+
+.add_button {
+    float: right;
+    font-size: 16px;
+    position: relative;
+    top: -150px;
+    border: 1px black solid;
+    width: 100px;
+    padding: 3px;
     text-align: center;
 }
