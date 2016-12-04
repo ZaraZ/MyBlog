@@ -31,7 +31,24 @@
 
     <div class="container">
         <div class="board">
-
+            <p class="title">
+                <span>标题：</span>
+                <input type="text" class="title_add" value="请输入正文" />
+            </p>
+            <p class="tag">
+                <span>标签：</span>
+                <input type="text" class="tag_add" value="用逗号分开多标签，可以为空" </p>
+                <div>
+                    <p class="content">
+                        <span>正文：</span>
+                        <input type="text" class="content_add" />
+                    </p>
+                    <div class="float-clear"></div>
+                </div>
+                <div class="add_button">
+                    <input type="submit" value="提交" />
+                    <input type="button" value="返回" onclick="history.go(-1)" />
+                </div>
         </div>
     </div>
 

@@ -19,7 +19,8 @@ h5 {
 }
 
 .lists a:hover {
-    color: black;
+    font-size: bold;
+    background-color: black;
 }
 
 hr {

@@ -1,0 +1,48 @@
+.board {
+    height: auto;
+    font-size: 16px;
+    padding: 50px;
+}
+
+.board input {
+    font-size: 14px;
+}
+
+.board p {
+    margin: 20px auto;
+}
+
+.title_add {
+    height: 20px;
+    width: 200px;
+}
+
+.tag_add {
+    height: 20px;
+    width: 200px;
+}
+
+.content span {
+    display: block;
+    float: left;
+}
+
+.content_add {
+    float: left;
+    margin-left: 8px;
+    width: 705px;
+    height: 1000px;
+}
+
+.msg_content_add {
+    width: 705px;
+    height: 100px;
+}
+
+.add_button input {
+    font-size: 16px;
+    width: 80px;
+    margin: 40px;
+    position: relative;
+    left: 250px;
+}
