@@ -3,6 +3,10 @@
 ***
 ### 进度
 ***
+2016.12.05
+* 新建php文件并进行html文件引入；
+* 完成注册功能；
+***
 2016.12.04
 * 完成日志、留言详情页与写入页，完成tags页面与about页面（即大体前端静态页面完成）；
 ***
@@ -22,7 +26,7 @@
 * 整理结构以及需求，建立数据库结构图(By Xmind)；
 ***
 ### 博客需求
-##### 目的：
+#### 目的：
 通过所学知识自己搭建一个简单的个人博客。
 #### 需求：
 * 用户有权限，分为管理员权限、博主权限、游客权限。其中管理员权限可以对所有用户（除自己）、日志、留言进行增删改；博主权限可以对自己的日志、留言进行增删改；游客权限只能对网站进行浏览。
@@ -35,3 +39,39 @@
 * 留言列表中显示留言 ~~全部内容~~ 前20字，作者，时间，时间精确到年月日时分秒。每页最多显示 ~~15~~ 10条留言，其余通过翻页继续显示。博主可在列表中每项最后点击删除按钮对相应留言进行删除。
 * Tags页面仅通过首页点击Tags栏进入，显示所有文章的标签，并且通过点击标签可以进入相应标签下的所有日志，标签后用括号显示使用次数。
 * About页面后续再添加需求说明，暂时空着。。。
+
+***
+### 数据库：my_bolg
+#### 建表语句：
+
+    create table users (
+      user_id mediumint(8) unsigned primary key auto_increment,
+      auth smallint(2) unsigned not null default '2',
+      user_name varchar(10) not null default '',
+      psw varchar(20) not null default '666666',
+      email varchar(30) not null default '',
+      last_login datetime
+    )engine=myisam default charset=utf8;
+
+    create table tags(
+      tag_id mediumint(8) unsigned primary key auto_increment,
+      tag_name varchar(10) not null default '',
+      art_num int(5) unsigned not null default '0'
+    )engine=myisam default charset=utf8;
+
+    create table articals(
+      artical_id  int(5) unsigned primary key auto_increment,
+      tag_id mediumint(8) unsigned,
+      user_id mediumint(8) unsigned,
+      title varchar(20) not null default '无题',
+      art_content text,
+      pubtime datetime,
+      last_modify datetime
+    )engine=myisam default charset=utf8;
+
+    create table msg(
+      msg_id  int(5) unsigned primary key auto_increment,
+      user_id mediumint(8) unsigned,
+      msg_content text,
+      pubtime datetime
+    )engine=myisam default charset=utf8;
