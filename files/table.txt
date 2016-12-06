@@ -1,0 +1,7 @@
+users:
+user_id:int(4),primary key,auto_increment;
+auth:smallint(2), 0\1\2, 0：超级管理员；1：博主；2：游客. 默认值2；
+user_name: varchar(10)
+psw:int(20),default '666666';
+email:varcahr(30);
+last_login:datetime;
