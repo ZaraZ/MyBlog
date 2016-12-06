@@ -30,22 +30,22 @@
     </header>
 
     <div class="container">
-
-        <div class="user_name">
-            <span class="user_text">昵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp称：</span>
-            <input class="user_blank" id="user_name" type="text" />
-        </div>
-        <div class="user_psw">
-            <span class="user_text">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</span>
-            <input class="user_blank" id="user_psw" type="password" maxlength="20" />
-        </div>
-        <div class="small_button">
-            <input class="sign_button" id="sign_in_button" type="submit" value="登陆" />
-            <div class="sign_link">
-                <a href="./sign_up.html">尚未拥有账号？前去注册~</a>
+        <form action="sign_in_check.php" method="post">
+            <div class="user_name">
+                <span class="user_text">昵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp称：</span>
+                <input class="user_blank" id="user_name" name="user_name" type="text" />
             </div>
-        </div>
-
+            <div class="user_psw">
+                <span class="user_text">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</span>
+                <input class="user_blank" id="user_psw" name="psw" type="password" maxlength="20" />
+            </div>
+            <div class="small_button">
+                <input class="sign_button" id="sign_in_button" name="submit" type="submit" value="登陆" />
+                <div class="sign_link">
+                    <a href="./sign_up.html">尚未拥有账号？前去注册~</a>
+                </div>
+            </div>
+        </form>
     </div>
 
     <footer>

@@ -30,25 +30,28 @@
     </header>
 
     <div class="container">
+        <form action="./lib/sign_up_check.php" method="post">
 
-        <div class="user_name">
-            <span class="user_text">昵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp称：</span>
-            <input class="user_blank" id="user_name" type="text" />
-        </div>
-        <div class="user_psw">
-            <span class="user_text">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</span>
-            <input class="user_blank" id="user_psw" type="password" maxlength="20" />
-        </div>
-        <div class="user_psw_confirm">
-            <span class="user_text">确认密码：</span>
-            <input class="user_blank" id="user_psw_confirm" type="password" maxlength="20" />
-        </div>
-        <div class="small_button">
-            <input class="sign_button" id="sign_up_button" type="submit" value="注册" />
-            <div class="sign_link">
-                <a href="./sign_in.html">已有账号？前去登陆~</a>
+            <div class="user_name">
+                <span class="user_text">昵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp称：</span>
+                <input class="user_blank" id="user_name" name="user_name" type="text" />
             </div>
-        </div>
+            <div class="user_psw">
+                <span class="user_text">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</span>
+                <input class="user_blank" id="user_psw" name="psw" type="password" maxlength="20" />
+            </div>
+            <div class="user_psw_confirm">
+                <span class="user_text">确认密码：</span>
+                <input class="user_blank" id="user_psw_confirm" name="confirm" type="password" maxlength="20" />
+            </div>
+            <div class="small_button">
+                <input class="sign_button" id="sign_up_button" type="submit" name="submit" value="注册" />
+                <div class="sign_link">
+                    <a href="./sign_in.html">已有账号？前去登陆~</a>
+                </div>
+            </div>
+
+        </form>
 
     </div>
 
