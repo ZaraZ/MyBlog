@@ -9,5 +9,5 @@
 * @copyright GPL
 *
 */
-  include('./view/artical_add.html');
+  include('../view/artical_add.html');
  ?>
