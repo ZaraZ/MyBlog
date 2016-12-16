@@ -22,19 +22,19 @@ mysql_select_db("my_blog", $conn);  //选择数据库
 mysql_query("set names 'utf8'"); //设定字符集
 
 if (!is_numeric($msg_id)) {
-  echo "<script>alert('ERRO！请检查留言地址！'); history.go(-1);</script>";
+  echo "<script>alert('ERRO！请检查留言地址！'); window.location.assign('../msg.php');</script>";
 }else {
   $sql = "select msg_id from msg where msg_id = '$msg_id'";
   $sql_rel = mysql_query($sql);
   $num = mysql_num_rows($sql_rel);
   if (!$num) {
-    echo "<script>alert('不存在该留言'); history.go(-1);</script>";
+    echo "<script>alert('不存在该留言'); window.location.assign('../msg.php');</script>";
   }else {
     $msg_del = mysql_query("delete from msg where msg_id = '$msg_id'");
     if (!$msg_del) {
-      echo "<script>alert('留言删除失败'); history.go(-1);</script>";
+      echo "<script>alert('留言删除失败');window.location.assign('../msg.php');</script>";
       }else {
-        echo "<script>alert('留言删除成功！');history.go(-1);</script>";
+        echo "<script>alert('留言删除成功！');window.location.assign('../msg.php');</script>";
       }
   }
 }

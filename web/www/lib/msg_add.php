@@ -11,7 +11,7 @@
 */
 
 if (empty($_POST)) {
-    include('./view/msg_add.html');     //若没有输入，点击提交还是引入当前页面
+    include('../view/msg_add.html');     //若没有输入，点击提交还是引入当前页面
 } else {
     //连接数据库，并把留言内容赋值给 $msgcontent
     $msgcontent = trim($_POST["msg_content"]);    //用trim( )函数来移除提交的留言首位的空白字符
@@ -24,16 +24,16 @@ if (empty($_POST)) {
 
     //检测留言是否为空
     if (empty($msgcontent)) {
-        echo '留言不能为空';
+        echo "<script>alert('留言不能为空！');window.location.assign('./msg_add.php');</script>";
         exit();
     }else {   //将留言内容写入数据库
       $sql_insert = "insert into msg (msg_content) values('$msgcontent')";
       $res_insert = mysql_query($sql_insert);
       if ($res_insert) {
-        echo '留言成功！';
+        echo "<script>alert('留言成功！');window.location.assign('../msg.php');</script>";
         exit();
       }else {
-        echo '系统繁忙，请稍候！';
+        echo "<script>alert('系统繁忙，请稍候！');window.location.assign('../msg.php');</script>";
         exit();
       }
     }
