@@ -117,7 +117,7 @@ function mExec($table, $data, $act = 'insert', $where = 0){
   if($act == 'insert'){
     $sql = "insert into $table (";
     $sql .= implode(',', array_keys($data)) . ") values('";
-    $sql .= implode("','", array_values($data), "')");
+    $sql .= implode("','", array_values($data)) . "')";
     return mQuery($sql);
   }elseif ($act == 'update') {
     $sql = "update $table set ";
@@ -128,14 +128,14 @@ function mExec($table, $data, $act = 'insert', $where = 0){
     return mQuery($sql);
   }
 }
-
-
+// $data = array('msgid' => 1, 'msgcontent' => 'testtest');
+// mExec('msg', $data);
 /**
 * 去的上一步insert操作产生的主键id
 *
 */
 
-funtion getLastId(){
+function getLastId(){
   return mysql_insert_id( mConn());
 }
 
