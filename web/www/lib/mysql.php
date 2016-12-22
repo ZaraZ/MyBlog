@@ -33,7 +33,14 @@ function mConn() {
 * @return mixed resource/bool
 */
 function mQuery($sql){
-  return mysql_query($sql, mConn());
+  $rs =  mysql_query($sql, mConn());
+  if($rs){
+    mLog($sql);
+  }else {
+    mLog($sql . "\n" . mysql_error());
+  }
+
+  return $rs;
 }
 
 /**
@@ -139,5 +146,14 @@ function getLastId(){
   return mysql_insert_id( mConn());
 }
 
-
+/**
+*
+* log日志记录
+* @param str $str 待记录的字符串
+*/
+function mLog($str){
+  $filename = www . '/log/' . date('Ymd') . '.txt';
+  $log = "-------------------------------------\n" . date('Y/m/d H:i:s') . "\n" . $str. "\n" . "-------------------------------------\n\n";
+  return file_put_contents($filename, $log, FILE_APPEND);
+}
  ?>
