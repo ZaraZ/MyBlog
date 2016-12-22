@@ -19,12 +19,10 @@
 function mConn() {
   static $conn = null;
   if($conn === null){
-    $host = '127.0.0.1';
-    $root = 'root';
-    $pwd = 'admin';
-    $conn = mysql_connect($host, $root, $pwd);
-    mysql_select_db('my_blog', $conn);  //选择数据库
-    mysql_query('set names utf8', $conn); //设定字符集
+    $cfg = require(www. './lib/config.php');
+    $conn = mysql_connect($cfg['host'], $cfg['user'], $cfg['pwd']);
+    mysql_select_db($cfg['db'], $conn);  //选择数据库
+    mysql_query('set names '.$cfg['charset'], $conn); //设定字符集
   }
   return $conn;
 }
