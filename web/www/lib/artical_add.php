@@ -25,7 +25,8 @@
     }elseif (empty($tagname)) {
       //若标签为空，则将标签分为“未分类”
       $tagname = "未分类";
-      $data = array("tag_id" => mTag($tagname),"title" => $title,"art_content" => "$text");
+      $tagid = mTag($tagname);
+      $data = array("tag_id" => $tagid,"title" => $title,"art_content" => $text);
       $res_insert = mExec('articals', $data);
       if ($res_insert) {
         echo "<script>alert('日志发布成功！');window.location.assign('../artical.php');</script>";
@@ -36,7 +37,8 @@
       }
     }else {
       //若标签不为空时
-      $data = array("tag_id" => mTag($tagname),"title" => $title,"art_content" => "$text");
+      $tagid = mTag($tagname);
+      $data = array("tag_id" => $tagid,"title" => $title,"art_content" => $text);
       $res_insert = mExec('articals', $data);
       if ($res_insert) {
         echo "<script>alert('日志发布成功！');window.location.assign('../artical.php');</script>";
