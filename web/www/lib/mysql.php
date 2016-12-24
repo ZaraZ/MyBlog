@@ -164,6 +164,7 @@ function mLog($str){
 *
 * 新建日志时对tag的操作函数
 * @param str $tagname 新增日志时候的标签名
+* @return int 返回标签对应的tag_id
 */
 function mTag($tagname){
   $sql = "select * from tags where tag_name = '$tagname'";
@@ -174,17 +175,17 @@ function mTag($tagname){
     //如果该标签存在，则标签下文章数加一，并获得其tag_id
     $rs['art_num'] += 1;
     mExec("tags", $rs, "update", "tag_name = '$tagname'");
-    return $rs['tag_id'];
+    return (int)$rs['tag_id'];
   }else{
     //如果标签不存在，则新增该标签，并将文章数设为1，获取其tag_id
     $rs['tag_name'] = $tagname;
     $rs['art_num'] = 1;
     mExec("tags", $rs);
-    return $rs['tag_id'];
+    return (int)$rs['tag_id'];
   }
 }
 // $tagname = "呵呵";
 // $id = mTag($tagname);
-// echo $id;
+// var_dump($id);
 
  ?>
