@@ -9,5 +9,10 @@
 * @copyright GPL
 *
 */
-  include('./view/artical.html');
+  require('./lib/init.php');
+
+  $sql = "select * from articals";
+  $articallist = mGetAll($sql);
+
+  include(www . '/view/artical.html');
  ?>

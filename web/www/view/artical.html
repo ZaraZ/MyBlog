@@ -37,86 +37,16 @@
             </p>
             <div class="clear-float"></div>
             <div class="list_board">
+              <?php foreach($articallist as $a) { ?>
                 <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
+                    <a href="./artical_content.php?artical_id=<?php echo $a['artical_id']; ?>"><h5 class="art_list_title"><?php echo $a['title']; ?></h5></a>
                     <p class="posted_time">
                         Posted By XXX XXXX-XX-XX XX:XX:XX
                     </p>
                     <div class="clear-float"></div>
                     <hr />
                 </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
-                <div class="lists">
-                    <a href="./artical_content.php"><h5 class="art_list_title">日志标题日志标题</h5></a>
-                    <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
-                    </p>
-                    <div class="clear-float"></div>
-                    <hr />
-                </div>
+                <?php }?>
             </div>
             <div class="page">
                 <a href=""><span class="post">上一页</span></a>
