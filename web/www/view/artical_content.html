@@ -36,13 +36,13 @@
                     返回
                 </p>
             </a>
-            <h4 class="art_title">日志标题</h4>
+            <h4 class="art_title"><?php echo $rs['title']?></h4>
             <p class="posted_time">
                 Posted By XXX XXXX-XX-XX XX:XX:XX
             </p>
             <hr />
             <p class="art_content">
-                这里是日志全部内容这里是日志全部内容这里是日志全部内容这里是日志全部内容这里是日志全部内容这里是日志全部内容这里是日志全部内容这里是日志全部内容这里是日志全部内容这里是日志全部内容这里是日志全部内容 这里是日志全部内容 这里是日志全部内容 这里是日志全部内容 这里是日志全部内容 这里是日志全部内容这里是日志全部内容
+                <?php echo $rs['art_content']?>
             </p>
             <div class="page">
                 <a href=""><span class="post">上一页</span></a>
