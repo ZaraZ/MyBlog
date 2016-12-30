@@ -9,5 +9,11 @@
 * @copyright GPL
 *
 */
-  include('./view/artical_content.html');
+require('./lib/init.php');
+
+$artid = $_GET['artical_id'];
+$sql = "select * from articals where artical_id = $artid";
+$rs = mGetRow($sql);
+
+include('./view/artical_content.html');
 ?>
