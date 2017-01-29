@@ -20,9 +20,9 @@ function mConn() {
   static $conn = null;
   if($conn === null){
     $cfg = require(www . '/lib/config.php');
-    $conn = mysql_connect($cfg['host'], $cfg['user'], $cfg['pwd']);
-    mysql_select_db($cfg['db'], $conn);  //选择数据库
-    mysql_query('set names '.$cfg['charset'], $conn); //设定字符集
+    $conn = mysqli_connect($cfg['host'], $cfg['user'], $cfg['pwd'], $cfg['db']);
+    // mysql_select_db($cfg['db'], $conn);  //选择数据库
+    mysqli_query($conn, 'set names '.$cfg['charset']); //设定字符集
   }
   return $conn;
 }
@@ -33,7 +33,7 @@ function mConn() {
 * @return mixed resource/bool
 */
 function mQuery($sql){
-  $rs =  mysql_query($sql, mConn());
+  $rs =  mysqli_query(mConn(), $sql);
   if($rs){
     mLog($sql);
   }else {
@@ -57,7 +57,7 @@ function mGetAll($sql){
   }
 
   $data = array();
-  while ($row = mysql_fetch_assoc($rs)) {
+  while ($row = mysqli_fetch_assoc($rs)) {
     $data[] = $row;
   }
   return $data;
