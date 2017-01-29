@@ -1,2 +1,5 @@
 # 忽略log日志文件
 web/www/log
+
+# 忽略配置文件
+web/www/lib/config.php
