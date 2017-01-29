@@ -12,21 +12,30 @@
 
 
 
-//连接数据库，并把留言内容赋值给 $msgcontent
-$host = '127.0.0.1';
-$root = 'root';
-$pwd = 'admin';
-$conn = mysql_connect($host, $root, $pwd);
-mysql_select_db("my_blog", $conn);  //选择数据库
-mysql_query("set names 'utf8'"); //设定字符集
+// //连接数据库，并把留言内容赋值给 $msgcontent
+// $host = '127.0.0.1';
+// $root = 'root';
+// $pwd = 'admin';
+// $conn = mysql_connect($host, $root, $pwd);
+// mysql_select_db("my_blog", $conn);  //选择数据库
+// mysql_query("set names 'utf8'"); //设定字符集
+//
+// $sql_select = "select * from msg";
+// $res_select = mysql_query($sql_select);
+// $msglist = array();
+// while ($row = mysql_fetch_assoc($res_select)) {
+//   $msglist[] = $row;
+// }
+//
+// include('./view/msg.html');
 
-$sql_select = "select * from msg";
-$res_select = mysql_query($sql_select);
-$msglist = array();
-while ($row = mysql_fetch_assoc($res_select)) {
-  $msglist[] = $row;
-}
 
-include('./view/msg.html');
+require('./lib/init.php');
+
+$sql = "select * from msg";
+$msglist = mGetAll($sql);
+
+include(www . '/view/msg.html');
+
 
  ?>
