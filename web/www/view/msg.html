@@ -41,7 +41,7 @@
                 <div class="lists">
                     <h5 class="msg_list_title"><?php echo $m['msg_content']; ?></h5>
                     <p class="posted_time">
-                        Posted By XXX XXXX-XX-XX XX:XX:XX
+                        Posted By <?php echo $m['pubtime']?>
                         <a href="./lib/msg_delete.php?msg_id=<?php echo $m['msg_id']; ?>" style="color: gray;font-size: 14px">删除</a>
                     </p>
                     <div class="clear-float"></div>

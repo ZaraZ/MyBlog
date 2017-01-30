@@ -31,7 +31,8 @@ if (empty($_POST)) {
     }else {   //将留言内容写入数据库
       // $sql_insert = "insert into msg (msg_content) values('$msgcontent')";
       // $res_insert = mysql_query($sql_insert);
-      $data = array('msg_content' => $msgcontent);
+
+      $data = array('msg_content' => $msgcontent, 'pubtime' => mTime());
       $res_insert = mExec('msg', $data);
       if ($res_insert) {
         echo "<script>alert('留言成功！');window.location.assign('../msg.php');</script>";

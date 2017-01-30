@@ -197,4 +197,17 @@ function mTag($tagname){
 // $id = mTag($tagname);
 // var_dump($id);
 
+/**
+*
+* 获取当前北京时间
+* @return 当前北京时间
+*/
+function mTime(){
+  date_default_timezone_set('Asia/Shanghai');
+  $t = time();
+  return date("Y-m-d H:i:s", $t);
+}
+
+// $t = mTime();
+// echo $t;
  ?>
