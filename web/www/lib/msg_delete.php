@@ -28,8 +28,7 @@ if (!is_numeric($msg_id)) {
 }else {
   $sql = "select msg_id from msg where msg_id = '$msg_id'";
   $sql_rel = mQuery($sql);
-  $num = array();
-  $num = mGetRow($sql_rel);
+  $num = mysql_num_rows($sql_rel);   //通过搜索条目数量判断是否存在该留言
   if (!$num) {
     echo "<script>alert('不存在该留言'); window.location.assign('../msg.php');</script>";
   }else {
