@@ -93,8 +93,8 @@ function mGetRow($sql){
   return mysql_fetch_assoc($rs);
 }
 
-// $sql = "select * from users where user_id = 1";
-// var_dump(mGetRow($sql));
+$sql = "select * from msg where msg_id = 4";
+var_dump(mGetRow($sql));
 
 
 /**
