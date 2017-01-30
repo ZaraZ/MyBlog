@@ -72,9 +72,9 @@ function mGetAll($sql){
   return $data;
 }
 
-// $sql = "select * from users";
+// $sql = "select * from msg";
 // var_dump(mGetAll($sql));
-
+// exit();
 
 /**
 *
