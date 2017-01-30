@@ -20,9 +20,11 @@ function mConn() {
   static $conn = null;
   if($conn === null){
     $cfg = require(www . '/lib/config.php');
-    $conn = mysqli_connect($cfg['host'], $cfg['user'], $cfg['pwd'], $cfg['db']);
-    // mysql_select_db($cfg['db'], $conn);  //选择数据库
-    mysqli_query($conn, 'set names '.$cfg['charset']); //设定字符集
+    $conn = mysql_connect($cfg['host'], $cfg['user'], $cfg['pwd']);
+    mysql_select_db($cfg['db'], $conn);  //选择数据库
+    mysql_query('set names '.$cfg['charset'], $conn); //设定字符集
+    // $conn = mysqli_connect($cfg['host'], $cfg['user'], $cfg['pwd'], $cfg['db']);
+    // mysqli_query($conn, 'set names '.$cfg['charset']); //设定字符集
   }
   return $conn;
 }
