@@ -28,6 +28,13 @@ function mConn() {
   }
   return $conn;
 }
+// if(mConn()){
+//   echo "yes";
+// }else{
+//   echo "no";
+// }
+// exit();
+
 
 /**
 *
