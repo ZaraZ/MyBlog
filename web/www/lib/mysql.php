@@ -33,7 +33,7 @@ function mConn() {
 * @return mixed resource/bool
 */
 function mQuery($sql){
-  $rs =  mysqli_query(mConn(), $sql);
+  $rs =  mysql_query($sql, mConn());
   if($rs){
     mLog($sql);
   }else {
@@ -57,7 +57,7 @@ function mGetAll($sql){
   }
 
   $data = array();
-  while ($row = mysqli_fetch_assoc($rs)) {
+  while ($row = mysql_fetch_assoc($rs)) {
     $data[] = $row;
   }
   return $data;
