@@ -9,5 +9,12 @@
 * @copyright GPL
 *
 */
+
+  require('./lib/init.php');
+
+  $tagid = $_GET['tag_id'];
+  $sql = "select * from tags where tag_id = $tagid";
+  $rs = mGetRow($sql);
+  
   include('./view/tags_detail.html');
  ?>
