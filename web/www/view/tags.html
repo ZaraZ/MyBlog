@@ -33,18 +33,11 @@
         <div class="board">
             <h4 class="tags">Tags</h4>
             <div class="tag_board">
-                <p id="tag1_name">
-                    <a href="./tags_detail.php">tag1_name</a>
+              <?php foreach($taglist as $l) { ?>
+                <p id="<?php echo $l['tag_name'] ?>">
+                    <a href="./tags_detail.php?tag_id=<?php echo $l['tag_id'] ?>"><?php echo $l['tag_name'] ?></a>
                 </p>
-                <p id="tag2_name">
-                    <a href="./tags_detail.php">tag2_name</a>
-                </p>
-                <p id="tag3_name">
-                    <a href="./tags_detail.php">tag3_name</a>
-                </p>
-                <p id="tag4_name">
-                    <a href="./tags_detail.php">tag4_name</a>
-                </p>
+                <?php } ?>
                 <div class="clear-float"></div>
             </div>
 
