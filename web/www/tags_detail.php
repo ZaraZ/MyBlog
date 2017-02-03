@@ -13,8 +13,9 @@
   require('./lib/init.php');
 
   $tagid = $_GET['tag_id'];
-  $sql = "select * from tags where tag_id = $tagid";
-  $rs = mGetRow($sql);
-  
+  // echo $tagid;exit();
+  $sql = "select * from articals where tag_id = $tagid";
+  $rs = mGetAll($sql);
+
   include('./view/tags_detail.html');
  ?>
