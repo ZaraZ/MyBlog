@@ -9,5 +9,11 @@
 * @copyright GPL
 *
 */
+
+  require('./lib/init.php');
+
+  $sql = "select * from tags";
+  $taglist = mGetAll($sql);
+
   include('./view/tags.html');
  ?>
