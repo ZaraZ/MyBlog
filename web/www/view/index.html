@@ -32,9 +32,10 @@
     <div class="container">
         <div class="left">
             <div class="art_preview">
-                <h2 class="art_preview_title"><a href="./artical_content.php">这里是首页日志标题</a></h2>
+              <?php foreach($artPre as $a) { ?>
+                <h2 class="art_preview_title"><a href="./artical_content.php?artical_id=<?php echo $a['artical_id']; ?>"><?php echo $a['title']; ?></a></h2>
                 <p class="posted_time">
-                    Posted By XXX. XXXX-XX-XX XX:XX:XX
+                    Posted By XXX. <?php echo $a['pubtime']; ?>
                 </p>
                 <p class="art_preview_content">
                     <a href="./artical_content.php">
@@ -42,38 +43,9 @@
                     </a>
                 </p>
                 <p class="art_tags">
-                    <span id="%tag1_name"><a href="./tags_detail.php">tag1_name</a></span>
-                    <span id="%tag2_name"><a href="./tags_detail.php">tag2_name</a></span>
+                    <span id="%tag1_name"><a href="./tags_detail.php?tag_id=<?php echo $a['tag_id']; ?>">tag1_name</a></span>
                 </p>
-            </div>
-            <div class="art_preview">
-                <h2 class="art_preview_title"><a href="./artical_content.php">这里是首页日志标题</a></h2>
-                <p class="posted_time">
-                    Posted By XXX. XXXX-XX-XX XX:XX:XX
-                </p>
-                <p class="art_preview_content">
-                    <a href="./artical_content.php">
-                    这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览
-                    </a>
-                </p>
-                <p class="art_tags">
-                    <span id="%tag1_name"><a href="./tags_detail.php">tag1_name</a></span>
-                    <span id="%tag2_name"><a href="./tags_detail.php">tag2_name</a></span>
-                </p>
-            </div><div class="art_preview">
-                <h2 class="art_preview_title"><a href="./artical_content.php">这里是首页日志标题</a></h2>
-                <p class="posted_time">
-                    Posted By XXX. XXXX-XX-XX XX:XX:XX
-                </p>
-                <p class="art_preview_content">
-                    <a href="./artical_content.php">
-                    这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览这里是首页日志预览
-                    </a>
-                </p>
-                <p class="art_tags">
-                    <span id="%tag1_name"><a href="./tags_detail.php">tag1_name</a></span>
-                    <span id="%tag2_name"><a href="./tags_detail.php">tag2_name</a></span>
-                </p>
+              <?php } ?>
             </div>
             <a href="./artical.php" class="more_link">
               <p class="more">更多...</p>
@@ -85,44 +57,14 @@
                 <h3 class="msg_preview_title"><a href="./msg.php">留言板</a></h2>
               <div class="msg_board">
                   <div class="msg_preview">
+                    <?php foreach($msgPre as $m) { ?>
                     <p class="msg_preview_content">
-                      <a href="./msg_content.php">这里是留言预览这里是留言预览这里是留言预览这里是留言预览</a>
+                      <?php echo $m['msg_content']; ?>
                     </p>
                     <p class="posted_time">
-                      Posted at xx-xx
+                      Posted at <?php echo $m['pubtime']; ?>
                     </p>
-                  </div>
-                  <div class="msg_preview">
-                    <p class="msg_preview_content">
-                      <a href="./msg_content.php">这里是留言预览这里是留言预览这里是留言预览这里是留言预览</a>
-                    </p>
-                    <p class="posted_time">
-                      Posted at xx-xx
-                    </p>
-                  </div>
-                  <div class="msg_preview">
-                    <p class="msg_preview_content">
-                      <a href="./msg_content.php">这里是留言预览这里是留言预览这里是留言预览这里是留言预览</a>
-                    </p>
-                    <p class="posted_time">
-                      Posted at xx-xx
-                    </p>
-                  </div>
-                  <div class="msg_preview">
-                    <p class="msg_preview_content">
-                      <a href="./msg_content.php">这里是留言预览这里是留言预览这里是留言预览这里是留言预览</a>
-                    </p>
-                    <p class="posted_time">
-                      Posted at xx-xx
-                    </p>
-                  </div>
-                  <div class="msg_preview">
-                    <p class="msg_preview_content">
-                      <a href="./msg_content.php">这里是留言预览这里是留言预览这里是留言预览这里是留言预览</a>
-                    </p>
-                    <p class="posted_time">
-                      Posted at xx-xx
-                    </p>
+                    <?php } ?>
                   </div>
                   <a href="./artical.php" class="more_link">
                     <p class="more">更多...</p>
@@ -132,8 +74,9 @@
           <div class="tags_area">
               <h3 class="tags_title"><a href="./tags.php">Tags</a></h3>
                 <div class="tags_board">
-                    <span id="%tag1_name" class="tags_name" ><a href="./tags_detail.php">tag1_name</a></span>
-                    <span id="%tag2_name" class="tags_name" ><a href="./tags_detail.php">tag2_name</a></span>
+                  <?php foreach($tagPre as $t) { ?>
+                    <span id="%tag1_name" class="tags_name" ><a href="./tags_detail.php?tag_id=<?php echo $t['tag_id']; ?>"><?php echo $t['tag_name']; ?></a></span>
+                  <?php } ?>
                 </div>
             </div>
 

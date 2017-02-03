@@ -9,5 +9,12 @@
 * @copyright GPL
 *
 */
+
+  require('./lib/init.php');
+
+  $artPre = mPreview('artical', 3);
+  $msgPre = mPreview('msg', 5);
+  $tagPre = mPreview('tag', 5);
+
   include('./view/index.html');
  ?>
