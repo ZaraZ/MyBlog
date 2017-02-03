@@ -210,4 +210,21 @@ function mTime(){
 
 // $t = mTime();
 // echo $t;
+
+/**
+*
+*
+* 获取前n条项目作为预览
+* @param str $style 预览数据类型，默认为msg，可谓artical、msg
+* @param str $table 需要获取预览数据的表
+* @param int $num 需要获取预览数据的数目
+* @return arr 获取后的数组
+*
+*/
+function mPreview($style = 'msg', $table, $num){
+  if ($style == 'msg') {
+    
+  }
+}
+
  ?>
