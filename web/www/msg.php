@@ -32,10 +32,13 @@
 
 require('./lib/init.php');
 
-$sql = "select * from msg";
-$msglist = mGetAll($sql);
+if (!flogin()) {
+  header('Location:sign_in.php');
+}else {
+  $sql = "select * from msg";
+  $msglist = mGetAll($sql);
 
-include(www . '/view/msg.html');
-
+  include(www . '/view/msg.html');
+}
 
  ?>

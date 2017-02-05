@@ -10,9 +10,13 @@
 *
 */
   require('./lib/init.php');
+  if (!flogin()) {
+    header('Location:sign_in.php');
+  }else {
+    $sql = "select * from articals";
+    $articallist = mGetAll($sql);
 
-  $sql = "select * from articals";
-  $articallist = mGetAll($sql);
+    include(www . '/view/artical.html');  
+  }
 
-  include(www . '/view/artical.html');
  ?>
