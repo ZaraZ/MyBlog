@@ -51,7 +51,7 @@
               <?php foreach($artPre as $a) { ?>
                 <h2 class="art_preview_title"><a href="./artical_content.php?artical_id=<?php echo $a['artical_id']; ?>"><?php echo $a['title']; ?></a></h2>
                 <p class="posted_time">
-                    Posted By XXX. <?php echo $a['pubtime']; ?>
+                    Posted By <?php echo $a['author']; ?>. <?php echo $a['pubtime']; ?>
                 </p>
                 <p class="art_preview_content">
                     <a href="./artical_content.php">

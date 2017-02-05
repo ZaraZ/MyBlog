@@ -54,11 +54,11 @@
             </a>
             <h4 class="art_title"><?php echo $rs['title']?></h4>
             <p class="posted_time">
-                Posted By <?php echo $rs['pubtime']?>
+                Posted By <?php echo $rs['author']; ?>. <?php echo $rs['pubtime']; ?>
             </p>
             <hr />
             <p class="art_content">
-                <?php echo $rs['art_content']?>
+                <?php echo $rs['art_content']; ?>
             </p>
             <div class="page">
                 <a href=""><span class="post">上一页</span></a>

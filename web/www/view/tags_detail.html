@@ -53,7 +53,7 @@
                 <?php foreach($rs as $r) { ?>
                   <a href="./artical_content.php?artical_id=<?php echo $r['artical_id']; ?>"><h5 class="art_list_title"><?php echo $r['title']; ?></h5></a>
                   <p class="posted_time">
-                      Posted By <?php echo $r['pubtime']; ?>
+                      Posted By <?php echo $r['author']; ?>. <?php echo $r['pubtime']; ?>
                   </p>
                   <div class="clear-float"></div>
                   <hr />

@@ -17,6 +17,7 @@
     $title = trim($_POST["title"]);       //用trim( )函数来移除提交的首位的空白字符
     $tagname = trim($_POST["tagname"]);
     $text = trim($_POST["content"]);
+    $author = $_COOKIE['name'];
 
     //检测日志内容是否为空
     if(empty($text)){
@@ -26,7 +27,8 @@
       //若标签为空，则将标签分为“未分类”
       $tagname = "未分类";
       $tagid = mTag($tagname);
-      $data = array("tag_id" => $tagid,"title" => $title,"art_content" => $text, "pubtime" => fTime());
+      $userid = mUser($author);
+      $data = array("tag_id" => $tagid, "user_id" => $userid, "author" => $author, "title" => $title,"art_content" => $text, "pubtime" => fTime());
       $res_insert = mExec('articals', $data);
       if ($res_insert) {
         echo "<script>alert('日志发布成功！');window.location.assign('../artical.php');</script>";
@@ -38,7 +40,8 @@
     }else {
       //若标签不为空时
       $tagid = mTag($tagname);
-      $data = array("tag_id" => $tagid,"title" => $title,"art_content" => $text, "pubtime" => fTime());
+      $userid = mUser($author);
+      $data = array("tag_id" => $tagid, "user_id" => $userid, "author" => $author, "title" => $title,"art_content" => $text, "pubtime" => fTime());
       $res_insert = mExec('articals', $data);
       if ($res_insert) {
         echo "<script>alert('日志发布成功！');window.location.assign('../artical.php');</script>";
