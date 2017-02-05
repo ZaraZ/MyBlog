@@ -30,6 +30,9 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "登陆") {
        $num = mGetRow($sql); //统计执行结果影响的行数
        if ($num) {    //匹配到用户名及密码
           echo "<script>alert('登陆成功');</script>";
+          $data = array('last_login' => fTime());
+          $where = "user_name". "='" . $num['user_name'] . "'";
+          mExec('users', $data, 'update', $where);
           setcookie('name', $num['user_name']);
           header('Location:../index.php');
        } else {    //没有匹配成功
