@@ -12,8 +12,13 @@
 
   require('./lib/init.php');
 
-  $sql = "select * from tags";
-  $taglist = mGetAll($sql);
+  if (!fLogin()) {
+    header('Location:sign_in.php');
+  }else {
+    $sql = "select * from tags";
+    $taglist = mGetAll($sql);
 
-  include('./view/tags.html');
+    include('./view/tags.html');
+  }
+
  ?>

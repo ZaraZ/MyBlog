@@ -12,10 +12,16 @@
 
   require('./lib/init.php');
 
-  $tagid = $_GET['tag_id'];
-  // echo $tagid;exit();
-  $sql = "select * from articals where tag_id = $tagid";
-  $rs = mGetAll($sql);
+  if (!fLogin()) {
+    header('Location:sign_in.php');
+  }else {
+    $tagid = $_GET['tag_id'];
+    // echo $tagid;exit();
+    $sql = "select * from articals where tag_id = $tagid";
+    $rs = mGetAll($sql);
 
-  include('./view/tags_detail.html');
+    include('./view/tags_detail.html');
+  }
+
+
  ?>
