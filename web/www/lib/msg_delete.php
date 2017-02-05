@@ -30,13 +30,13 @@ if (!is_numeric($msg_id)) {
   $sql_rel = mQuery($sql);
   $num = mysql_num_rows($sql_rel);   //通过搜索条目数量判断是否存在该留言
   if (!$num) {
-    echo "<script>alert('不存在该留言'); window.location.assign('../msg.php');</script>";
+    echo "<script>alert('不存在该留言'); window.location.assign('../person.php');</script>";
   }else {
     $msg_del = mQuery("delete from msg where msg_id = '$msg_id'");
     if (!$msg_del) {
-      echo "<script>alert('留言删除失败');window.location.assign('../msg.php');</script>";
+      echo "<script>alert('留言删除失败');window.location.reload();</script>";
       }else {
-        echo "<script>alert('留言删除成功！');window.location.assign('../msg.php');</script>";
+        echo "<script>alert('留言删除成功！');window.location.reload();</script>";
       }
   }
 }
