@@ -11,10 +11,6 @@
 */
   require('./lib/init.php');
 
-  if (!fLogin()) {
-    header('Location:sign_in.php');
-  }else {
-    header('Location:index.php');
-  }
+  include('./view/sign_in.html');
 
  ?>
