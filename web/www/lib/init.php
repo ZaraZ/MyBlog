@@ -13,5 +13,6 @@ header('Content-type:text/html;charset=utf8');
 define('www', dirname(__DIR__));
 // echo www;
 require(www . '/lib/mysql.php');
+require(www . '/lib/func.php');
 
  ?>
