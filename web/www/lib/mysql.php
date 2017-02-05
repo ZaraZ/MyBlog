@@ -226,5 +226,16 @@ function mPreview($style = 'msg', $num){
 // $arr = mPreview('msg', 5);
 // var_dump($arr);exit();
 
+/**
+*
+* 获取作者id
+* @param str $author 作者名字
+* @return int 作者id（users表中的id）
+*/
+function mUser($author){
+  $sql = "select user_id from users where user_name = '$author'";
+  $rs = mGetOne($sql);
+  return (int)$rs;
+}
 
  ?>
