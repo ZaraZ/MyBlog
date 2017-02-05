@@ -32,7 +32,7 @@ if (empty($_POST)) {
       // $sql_insert = "insert into msg (msg_content) values('$msgcontent')";
       // $res_insert = mysql_query($sql_insert);
 
-      $data = array('msg_content' => $msgcontent, 'pubtime' => mTime());
+      $data = array('msg_content' => $msgcontent, 'pubtime' => fTime());
       $res_insert = mExec('msg', $data);
       if ($res_insert) {
         echo "<script>alert('留言成功！');window.location.assign('../msg.php');</script>";
