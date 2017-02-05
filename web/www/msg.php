@@ -32,7 +32,7 @@
 
 require('./lib/init.php');
 
-if (!flogin()) {
+if (!fLogin()) {
   header('Location:sign_in.php');
 }else {
   $sql = "select * from msg";

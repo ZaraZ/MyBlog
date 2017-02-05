@@ -16,5 +16,10 @@
   $msgPre = mPreview('msg', 5);
   $tagPre = mPreview('tag', 5);
 
-  include('./view/index.html');
+  if (!fLogin()) {
+    include('./view/index.html');
+  }else{
+    include('./view/index1.html');
+  }
+
  ?>
