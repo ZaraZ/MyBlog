@@ -31,7 +31,7 @@ function fTime(){
 * 检测是否登录
 * @return bool 是否存在 name 的cookie
 */
-function flogin(){
+function fLogin(){
   return isset($_COOKIE['name']);
 }
 
