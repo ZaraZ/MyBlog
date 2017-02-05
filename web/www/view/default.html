@@ -27,7 +27,7 @@
                     if(!fLogin()){
                       echo '<a href="./sign_in.php">登陆</a>';
                     }else{
-                      echo "欢迎您，" . $_COOKIE['name'];
+                      echo "欢迎您，" .'<a href="./person.php">' . $_COOKIE['name'] . '</a>';
                     }
                   ?>
                 </li>
