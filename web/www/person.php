@@ -11,6 +11,10 @@
 */
 
 
+require('./lib/init.php');
+
+
+include(www . '/view/msg.html');
 
 
 ?>
