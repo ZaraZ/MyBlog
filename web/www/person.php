@@ -13,8 +13,21 @@
 
 require('./lib/init.php');
 
+if (!fLogin()) {
+  header('Location:sign_in.php');
+}else {
+  $user = $_COOKIE['name'];
+  $userid = mUser($user);
 
-include(www . '/view/msg.html');
+  //选中文章
+  $sql1 = "select * from articals where user_id = $userid";
+  $articallist = mGetAll($sql1);
 
+  //选中留言
+  $sql2 = "select * from msg where user_id = $userid";
+  $msglist = mGetAll($sql2);
+
+  include(www . '/view/person.html');
+}
 
 ?>
