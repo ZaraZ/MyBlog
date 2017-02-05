@@ -55,31 +55,31 @@
         <div class="left">
           <h4 class="list_title">留言</h4>
           <div class="list_board">
-            <?php foreach($articallist as $a) { ?>
-              <div class="lists">
-                  <a href="./artical_content.php?artical_id=<?php echo $a['artical_id']; ?>"><h5 class="art_list_title"><?php echo $a['title']; ?></h5></a>
-                  <p class="posted_time">
-                      <a href="./lib/art_delete.php?artical_id=<?php echo $a['artical_id']; ?>" style="color: gray;font-size: 14px">删除</a>
-                  </p>
-                  <div class="clear-float"></div>
-                  <hr />
-              </div>
-              <?php }?>
+            <?php foreach($msglist as $m) { ?>
+            <div class="lists">
+                <h5 class="msg_list_title"><?php echo $m['msg_content']; ?></h5>
+                <p class="posted_time">
+                    <a href="./lib/msg_delete.php?msg_id=<?php echo $m['msg_id']; ?>" style="color: gray;font-size: 14px">删除</a>
+                </p>
+                <div class="clear-float"></div>
+                <hr />
+            </div>
+            <?php } ?>
           </div>
         </div>
         <div class="right">
           <h4 class="list_title">日志</h4>
             <div class="list_board">
-              <?php foreach($msglist as $m) { ?>
-              <div class="lists">
-                  <h5 class="msg_list_title"><?php echo $m['msg_content']; ?></h5>
-                  <p class="posted_time">
-                      <a href="./lib/msg_delete.php?msg_id=<?php echo $m['msg_id']; ?>" style="color: gray;font-size: 14px">删除</a>
-                  </p>
-                  <div class="clear-float"></div>
-                  <hr />
-              </div>
-              <?php } ?>
+              <?php foreach($articallist as $a) { ?>
+                <div class="lists">
+                    <a href="./artical_content.php?artical_id=<?php echo $a['artical_id']; ?>"><h5 class="art_list_title"><?php echo $a['title']; ?></h5></a>
+                    <p class="posted_time">
+                        <a href="./lib/art_delete.php?artical_id=<?php echo $a['artical_id']; ?>" style="color: gray;font-size: 14px">删除</a>
+                    </p>
+                    <div class="clear-float"></div>
+                    <hr />
+                </div>
+                <?php }?>
             </div>
         </div>
         <div class="clear-float"></div>
