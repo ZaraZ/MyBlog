@@ -17,6 +17,7 @@ create table articals(
   artical_id  int(5) unsigned primary key auto_increment,
   tag_id mediumint(8) unsigned,
   user_id mediumint(8) unsigned,
+  articals add author varchar(10) not null default '',
   title varchar(20) not null default '无题',
   art_content text,
   pubtime datetime,
