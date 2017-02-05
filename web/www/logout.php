@@ -1,7 +1,7 @@
 <meta charset="utf8">
 <?php
 /**
-* lougout.php 用户登出页
+* logout.php 用户登出页
 *
 * @author Abra <xiangyunz@outlook.com> //作者邮箱
 * @link https://github.com/ZaraZ       //作者的github
@@ -10,7 +10,7 @@
 *
 */
   require('./lib/init.php');
-  
+
   if (!fLogin()) {
     header('Location:sign_in.php');
   }else {

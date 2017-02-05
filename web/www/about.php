@@ -9,5 +9,6 @@
 * @copyright GPL
 *
 */
+  require('./lib/init.php');
   include('./view/about.html');
  ?>
