@@ -15,7 +15,7 @@ require('./lib/init.php');
 
 if (isset($_POST["submit"]) && $_POST["submit"] == "登陆") {
     $user = $_POST["user_name"];
-    $psw = $_POST["psw"];
+    $psw = md5($_POST["psw"]);
     // $host = '127.0.0.1';
     // $root = 'root';
     // $pwd = 'admin';

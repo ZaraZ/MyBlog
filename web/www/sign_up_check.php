@@ -32,7 +32,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "注册") {
              if ($num) {    //如果已经存在该用户
                  echo "<script>alert('用户名已存在'); history.go(-1);</script>";
              } else {    //若不存在当前注册用户名称
-                $data = array('user_name' => $user, 'psw' => $psw);
+                $data = array('user_name' => $user, 'psw' => md5($psw));
                 //  $sql_insert = "insert into users (user_name,psw) values('$user','$psw')";
                 //  $res_insert = mysql_query($sql_insert);
                 $res_insert = mExec('users', $data);
