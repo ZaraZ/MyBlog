@@ -12,8 +12,8 @@
 
   require('./lib/init.php');
 
-  $artPre = mPreview('artical', 3);
-  $msgPre = mPreview('msg', 5);
+  $artPre = fPreview('artical', mPreview('artical', 3), 150);
+  $msgPre = fPreview('msg', mPreview('msg', 5), 45);
   $tagPre = mPreview('tag', 5);
 
   include('./view/index.html');

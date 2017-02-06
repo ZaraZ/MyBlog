@@ -67,4 +67,26 @@ function fUsername($name){
   return md5($name . '|'. $salt);
 }
 
+
+
+/**
+* 正文内容截取，以便首页预览
+* @param str $type 待处理的类型，默认为artical 可选msg;
+* @param arr $array 待处理的数组；
+* @param int $num 预览长度；
+* @return arr 返回处理后的数组
+*/
+function fPreview($type = 'artical', $array, $num){
+    foreach ($array as $k => $v) {
+      if ($type == 'artical') {
+        $m = $v['art_content'];
+        $array[$k]['art_content'] = substr($m, -strlen($m), $num) . "...";
+      }elseif ($type == 'msg') {
+        $m = $v['msg_content'];
+        $array[$k]['msg_content'] = substr($m, -strlen($m), $num) . "...";
+      }
+    }
+    return $array;
+}
+
 ?>
