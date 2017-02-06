@@ -5,4 +5,4 @@ web/www/log
 web/www/lib/config.php
 
 # HBuilder 工程文件
-./.project
+.project
