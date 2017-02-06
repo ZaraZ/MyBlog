@@ -74,6 +74,7 @@
               <div class="msg_board">
                   <div class="msg_preview">
                     <?php foreach($msgPre as $m) { ?>
+                      <br />
                     <p class="msg_preview_content">
                       <?php echo $m['msg_content']; ?>
                     </p>
@@ -81,6 +82,7 @@
                       Posted at <?php echo $m['pubtime']; ?>
                     </p>
                     <?php } ?>
+                    <br />
                   </div>
                   <a href="./artical.php" class="more_link">
                     <p class="more">更多...</p>
