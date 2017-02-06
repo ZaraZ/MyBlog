@@ -16,7 +16,7 @@ if (empty($_POST)) {
     include(www . '/view/msg_add.html');     //若没有输入，点击提交还是引入当前页面
 } else {
     //连接数据库，并把留言内容赋值给 $msgcontent
-    $msgcontent = trim($_POST["msg_content"]);    //用trim( )函数来移除提交的留言首位的空白字符
+    $msgcontent = htmlspecialchars(trim($_POST["msg_content"]));    //用trim( )函数来移除提交的留言首位的空白字符
     // $host = '127.0.0.1';
     // $root = 'root';
     // $pwd = 'admin';

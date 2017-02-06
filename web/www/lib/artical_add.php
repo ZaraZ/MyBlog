@@ -16,7 +16,7 @@
   }else{
     $title = trim($_POST["title"]);       //用trim( )函数来移除提交的首位的空白字符
     $tagname = trim($_POST["tagname"]);
-    $text = trim($_POST["content"]);
+    $text = htmlspecialchars(trim($_POST["content"]));
     $author = $_COOKIE['name'];
 
     //检测日志内容是否为空
