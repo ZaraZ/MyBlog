@@ -15,4 +15,8 @@ define('www', dirname(__DIR__));
 require(www . '/lib/mysql.php');
 require(www . '/lib/func.php');
 
+$_GET = fAddslashes($_GET);
+$_POST = fAddslashes($_POST);
+$_COOKIE = fAddslashes($_COOKIE);
+
  ?>
