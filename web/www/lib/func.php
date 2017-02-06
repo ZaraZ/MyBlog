@@ -35,4 +35,20 @@ function fLogin(){
   return isset($_COOKIE['name']);
 }
 
+/**
+* 转义字符串，对Post、Get、Cookie 数组进行转义
+* @param $arr 需要转义的数组
+* @return $arr 转义后的数组
+*/
+function fAddslashes($arr){
+  foreach ($arr as $k => $v) {
+    if(is_string($v)){
+      $arr[$k] = addslashes($v);
+    }elseif (is_array($v)) {
+      $arr[$k] = fAddslashes($v);
+    }
+  }
+  return $arr;
+}
+
 ?>
