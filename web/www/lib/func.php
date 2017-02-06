@@ -51,4 +51,16 @@ function fAddslashes($arr){
   return $arr;
 }
 
+
+/**
+* 加密用户名
+* @param str @name 用户名
+* @return str 加密后的用户名
+*/
+function fUsername($name){
+  $cfg = include(www . '/lib/config.php');
+  $salt = $cfg['salt'];
+  return md5($name . '|'. $salt);
+}
+
 ?>
