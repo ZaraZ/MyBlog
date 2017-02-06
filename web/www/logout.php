@@ -15,6 +15,7 @@
     header('Location:sign_in.php');
   }else {
     setcookie('name', null, 0);
+    setcookie('code', null, 0);
     header('Location:index.php');
   }
  ?>

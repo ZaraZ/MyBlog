@@ -29,10 +29,14 @@ function fTime(){
 /**
 *
 * 检测是否登录
-* @return bool 是否存在 name 的cookie
+* @return bool 是否登陆
 */
 function fLogin(){
-  return isset($_COOKIE['name']);
+  // return isset($_COOKIE['name']);
+  if (!isset($_COOKIE['name']) || !isset($_COOKIE['code'])) {
+    return false;
+  }
+  return $_COOKIE['code'] === fUsername($_COOKIE['name']);
 }
 
 /**

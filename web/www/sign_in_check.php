@@ -34,6 +34,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "登陆") {
           $where = "user_name". "='" . $num['user_name'] . "'";
           mExec('users', $data, 'update', $where);
           setcookie('name', $num['user_name']);
+          setcookie('code',fUsername($num['user_name']));
           header('Location:../index.php');
        } else {    //没有匹配成功
                  echo "<script>alert('用户名或密码不正确！');history.go(-1);</script>";
