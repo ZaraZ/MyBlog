@@ -8,30 +8,30 @@
     <title>翔云的博客 | Abracadabra' s Blog</title>
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/about.css" />
-    
-    
+
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
-	<!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-    
-    
+
+
 </head>
 
 <body>
@@ -48,7 +48,7 @@
         <div class="header-button">
             <ul>
                 <li>
-                  <?php
+                    <?php
                     if(!fLogin()){
                       echo '<a href="./sign_in.php">登陆</a>';
                     }else{
@@ -57,7 +57,7 @@
                   ?>
                 </li>
                 <li>
-                  <?php
+                    <?php
                     if(!fLogin()){
                       echo '<a href="./sign_up.php">注册</a>';
                     }else{
@@ -71,140 +71,141 @@
 
     <div class="container">
         <div class="board">
-        	<div id="fh5co-main" style="width: 700px;">
-		<div class="fh5co-tab-wrap" style="padding: 0px;margin-left: 0px;">
-			<ul class="fh5co-tab-menu">
-				<li class="active"><a href="#" data-tab="1"><span class="icon icon-glass"></span><span class="menu-text">简介</span></a></li>
-				<li><a href="#" data-tab="2"><span class="icon icon-graduation-cap"></span><span class="menu-text">生涯经历</span></a></li>
-				<li><a href="#" data-tab="3"><span class="icon icon-black-tie"></span><span class="menu-text">项目经验</span></a></li>
-				<li><a href="#" data-tab="4" data-pie="yes"><span class="icon icon-fighter-jet"></span><span class="menu-text">技能</span></a></li>
-			</ul>
-			<div class="fh5co-tab-content active" data-content="1">
-				<div class="fh5co-content-inner text-center">
-					<div class="row row-bottom-padded-sm">
-						<div class="col-md-12">
-							<figure>
-								<img src="images/profile_img.png">
-							</figure>
-							<h1>张翔云</h1>
-							<p>热爱新鲜事物，热爱互联网。曾担任过Web工程师，兼运维和产品助理，帮助公司对网站进行功能开发与维护，以及需求攥写。具有良好的学习能力。</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 fh5co-counter">
-							<div class="fh5co-text">
-								<h3 class="border-bottom">热情，执着，刻苦</h3>
-								<br />
-								<p>Github: github.com/ZaraZ</p>
-								<p>个人邮箱: xiangyunz@outlook.com</p>
-								<p>联系方式: 18938884466</p>
-								<br />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="fh5co-tab-content" data-content="2">
-				<div class="fh5co-content-inner">
-					<div class="row">
-						<div class="col-md-12">
-							<p></p>
+            <div id="fh5co-main" style="width: 700px;">
+                <div class="fh5co-tab-wrap" style="padding: 0px;margin-left: 0px;">
+                    <ul class="fh5co-tab-menu">
+                        <li class="active"><a href="#" data-tab="1"><span class="icon icon-glass"></span><span class="menu-text">简介</span></a></li>
+                        <li><a href="#" data-tab="2"><span class="icon icon-graduation-cap"></span><span class="menu-text">生涯经历</span></a></li>
+                        <li><a href="#" data-tab="3"><span class="icon icon-black-tie"></span><span class="menu-text">项目经验</span></a></li>
+                        <li><a href="#" data-tab="4" data-pie="yes"><span class="icon icon-fighter-jet"></span><span class="menu-text">技能</span></a></li>
+                    </ul>
+                    <div class="fh5co-tab-content active" data-content="1">
+                        <div class="fh5co-content-inner text-center">
+                            <div class="row row-bottom-padded-sm">
+                                <div class="col-md-12">
+                                    <figure>
+                                        <img src="images/profile_img.png">
+                                    </figure>
+                                    <h1>张翔云</h1>
+                                    <p style="text-align:left;"> &nbsp; &nbsp;&nbsp;曾在一家初创型公司担任web开发，后期兼职产品经理与运营。当时现成公司网站系外包制作的，存在大量无用代码和无用接口，同时网站功能不全有待完善。所以在维护网站的同时重新整理了网站需求，梳理网站流程以及公司团队内运营流程，并于技术部同事配合逐渐将公司网站改善的更加合理方便。
+                                        <br /> &nbsp;&nbsp; &nbsp;个人对互联网以及新鲜事物有着极大的兴趣，有着较强的学习能力和抗压能力，遇到问题更倾向于去优先寻找解决问题的方法。未来希望自己能在技术领域越走越远，能够独当一面。</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 fh5co-counter">
+                                    <div class="fh5co-text">
+                                        <h3 class="border-bottom">热情，执着，刻苦</h3>
+                                        <br />
+                                        <p>Github: github.com/ZaraZ</p>
+                                        <p>个人邮箱: xiangyunz@outlook.com</p>
+                                        <p>联系方式: 18938884466</p>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fh5co-tab-content" data-content="2">
+                        <div class="fh5co-content-inner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p></p>
 
-							<div class="fh5co-feature">
-								<div class="fh5co-icon">
-									<i class="icon-graduation-cap"></i>
-								</div>
-								<div class="fh5co-text">
-									<h2>2015年7月</h2>
-									<p>毕业于深圳大学信息工程学院电子信息工程专业.</p>
-								</div>
-							</div>
+                                    <div class="fh5co-feature">
+                                        <div class="fh5co-icon">
+                                            <i class="icon-graduation-cap"></i>
+                                        </div>
+                                        <div class="fh5co-text">
+                                            <h2>2015年7月</h2>
+                                            <p>毕业于深圳大学信息工程学院电子信息工程专业.</p>
+                                        </div>
+                                    </div>
 
-							<div class="fh5co-feature">
-								<div class="fh5co-icon">
-									<i class="icon-graduation-cap"></i>
-								</div>
-								<div class="fh5co-text">
-									<h2>2016.3月——2016年10月</h2>
-									<p>就职于 深圳前海星邦策略互联网金融服务有限公司<br />
-									<span style="font-size: 15px;">担任 网站开发，网站运维，产品经理；<br />
+                                    <div class="fh5co-feature">
+                                        <div class="fh5co-icon">
+                                            <i class="icon-graduation-cap"></i>
+                                        </div>
+                                        <div class="fh5co-text">
+                                            <h2>2016.3月——2016年10月</h2>
+                                            <p>就职于 深圳前海星邦策略互联网金融服务有限公司<br />
+                                                <span style="font-size: 15px;">担任 网站开发，网站运维，产品经理；<br />
 									工作内容：对网站功能和业务流程进行完善与调整，新功能的需求篡写；对网站进行维护，公司项目进行上线工作。 </span> </p>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="fh5co-tab-content" data-content="3">
-				<div class="fh5co-content-inner">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="fh5co-feature">
-								<div class="fh5co-icon">
-									<i class="icon-black-tie"></i>
-								</div>
-								<div class="fh5co-text">
-									<h2>2016.3 - 2016.10</h2>
-									<h3>蜘蛛众筹网站建设与改版</h3>
-									<ul style="font-size: 15px;">
-										<li>· 对旧网站进行功能完善，逐渐过渡到新网站；</li>
-										<li>· 对网站各项目数据进行维护整理；</li>
-										<li>· 新网站数据库设计；</li>
-										<li>· 改进公司、网站运营工作。</li>
-									</ul>
-								</div>
-							</div>
-							
-							<div class="fh5co-feature">
-								<br />
-								<div class="fh5co-icon">
-									<i class="icon-black-tie"></i>
-								</div>
-								<div class="fh5co-text">									
-									<h2>2016.12-2017.2</h2>
-									<h3>个人简易博客搭建</h3>
-									<p style="font-size: 15px;">自己业余时间制作的简易网站，仍在测试中。</p>
-								</div>
-							</div>
+                                        </div>
+                                    </div>
+                                </div>
 
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="fh5co-tab-content" data-content="4">
-				<div class="fh5co-content-inner">
-					<div class="row">
-						<div class="col-md-12">
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 text-center">
-							<div class="chart" data-percent="65"><span><strong>PHP</strong>65%</span></div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 text-center">
-							<div class="chart" data-percent="60"><span><strong>MySQL</strong>60%</span></div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 text-center">
-							<div class="chart" data-percent="60"><span><strong>HTML</strong>60%</span></div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 text-center">
-							<div class="chart" data-percent="60"><span><strong>CSS</strong>60%</span></div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 text-center">
-							<div class="chart" data-percent="50"><span><strong>JS</strong>50%</span></div>
-						</div>												
-						<div class="col-md-4 col-sm-6 col-xs-12 text-center">
-							<div class="chart" data-percent="60"><span><strong>Java</strong>60%</span></div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 text-center">
-							<div class="chart" data-percent="85"><span><strong>Git</strong>85%</span></div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>			
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fh5co-tab-content" data-content="3">
+                        <div class="fh5co-content-inner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="fh5co-feature">
+                                        <div class="fh5co-icon">
+                                            <i class="icon-black-tie"></i>
+                                        </div>
+                                        <div class="fh5co-text">
+                                            <h2>2016.3 - 2016.10</h2>
+                                            <h3>蜘蛛众筹网站建设与改版</h3>
+                                            <ul style="font-size: 15px;">
+                                                <li>· 对旧网站进行功能完善，逐渐过渡到新网站；</li>
+                                                <li>· 对网站各项目数据进行维护整理；</li>
+                                                <li>· 新网站数据库设计；</li>
+                                                <li>· 改进公司、网站运营工作。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="fh5co-feature">
+                                        <br />
+                                        <div class="fh5co-icon">
+                                            <i class="icon-black-tie"></i>
+                                        </div>
+                                        <div class="fh5co-text">
+                                            <h2>2016.12-2017.2</h2>
+                                            <h3>个人简易博客搭建</h3>
+                                            <p style="font-size: 15px;">自己业余时间制作的简易网站，仍在测试中。</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fh5co-tab-content" data-content="4">
+                        <div class="fh5co-content-inner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                                    <div class="chart" data-percent="65"><span><strong>PHP</strong>65%</span></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                                    <div class="chart" data-percent="60"><span><strong>MySQL</strong>60%</span></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                                    <div class="chart" data-percent="60"><span><strong>HTML</strong>60%</span></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                                    <div class="chart" data-percent="60"><span><strong>CSS</strong>60%</span></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                                    <div class="chart" data-percent="50"><span><strong>JS</strong>50%</span></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                                    <div class="chart" data-percent="60"><span><strong>Java</strong>60%</span></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                                    <div class="chart" data-percent="85"><span><strong>Git</strong>85%</span></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -214,17 +215,17 @@
         </p>
     </footer>
     <!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Easy PieChart -->
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
